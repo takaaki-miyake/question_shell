@@ -21,12 +21,15 @@ txtcnt=0
 while read line
 do
   case $line in
+    # 対象ファイル名がjson
     *.json) 
 	    jsoncnt=$((jsoncnt + 1))
 	    ;;
+    # 対象ファイル名がcsv
     *.csv)  
 	    csvcnt=$((csvcnt + 1))
 	    ;;
+    # 対象ファイルがtxt
     *.txt)
             txtcnt=$((txtcnt + 1))
             ;;
